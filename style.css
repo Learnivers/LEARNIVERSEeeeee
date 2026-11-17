@@ -5,7 +5,7 @@
   --lav: #e7defd;
   --lav2: #f3eeff;
   --text: #2b2455;
-  --muted: #5f5a86;
+  --muted: #6d5a86;
   --yellow: #ffc233;
   --pink: #ff5fa2;
 }
@@ -42,16 +42,39 @@ svg { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; 
 .brand-text small { font-size: .8rem; font-weight: 700; color: var(--purple); }
 .brand-text i { font-style: normal; margin: 0 3px; color: var(--muted); }
 
-.tabs { display: flex; gap: 4px; }
-.tabs button {
-  display: flex; align-items: center; gap: 8px; cursor: pointer;
-  border: 0; background: transparent; font: inherit; font-weight: 700; font-size: .98rem;
-  color: var(--deep); padding: 10px 18px; border-radius: 999px; transition: background .2s, transform .15s;
+
+/* ===== Main Navigation ===== */
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
-.tabs button svg { width: 20px; height: 20px; }
-.tabs button:hover { background: var(--lav2); transform: translateY(-1px); }
-.tabs button.active { background: var(--lav); }
-.tabs button.active svg { fill: var(--purple); stroke: var(--purple); }
+
+.tabs a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font: inherit;
+  font-weight: 800;
+  font-size: .98rem;
+  color: var(--deep);
+  padding: 12px 18px;
+  border-radius: 999px;
+  transition: background .2s, transform .15s;
+  white-space: nowrap;
+}
+
+.tabs a:hover {
+  background: var(--lav2);
+  transform: translateY(-1px);
+}
+
+.tabs a.active {
+  background: var(--lav);
+  color: var(--purple);
+}
+
 
 .avatar-btn {
   flex: 0 0 auto; width: 66px; height: 66px; border-radius: 50%; cursor: pointer;
@@ -347,8 +370,10 @@ h2 { font-size: 2.3rem; font-weight: 800; }
   .home-text h1, .script { white-space: normal; }
   .panel.home { padding-left: 32px; padding-right: 32px; }
   .home-grid { grid-template-columns: 1fr; text-align: center; }
-  .tabs button span { display: none; }
-  .tabs button { padding: 10px 12px; }
+  .tabs a {
+  padding: 9px 10px;
+  font-size: .85rem;
+}
   .stage { padding: 0 20px; }
   .panel { padding: 36px 32px 70px; }
   .kid {
@@ -391,6 +416,15 @@ h2 { font-size: 2.3rem; font-weight: 800; }
   .controls { padding: 12px 14px; }
   .btn { padding: 12px 20px; font-size: 1rem; }
   .dots button { margin-right: 18px; } .dots button:not(:last-child)::after { width: 18px; }
+  .tabs {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tabs a {
+  font-size: .75rem;
+  padding: 7px 9px;
+}
 }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
 
