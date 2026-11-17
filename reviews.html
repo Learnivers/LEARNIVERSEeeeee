@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Reviews – Learniverse</title>
+  <meta name="description" content="Honest reviews from families who bought and used Learniverse books.">
+  <link rel="icon" type="image/png" href="../IMAGES/LOOGO.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/style.css">
+   <link rel="stylesheet" href="../CSS/pages.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="nav-pill">
+      <a href="profile.html" class="brand">
+        <img src="../IMAGES/LOOGO.png" alt="Learniverse logo"
+             onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fallback',textContent:'📖'}))">
+        <strong>Learniverse</strong>
+      </a>
+    </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">Buyers</p>
+      <h1>Customer Reviews</h1>
+      <svg class="swoosh" viewBox="0 0 340 20" aria-hidden="true"><path d="M6 13 C 90 2, 220 4, 334 10" stroke="#f2b134" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+      <p class="lead">Honest reviews from families who bought and used Learniverse books.</p>
+      
+    </section>
+
+    <section class="card">
+      <div class="rev-top">
+        <div class="avg">
+          <div class="num" id="avgNum">0.0</div>
+          <div class="stars" id="avgStars"></div>
+          <small id="avgCount">No reviews yet</small>
+        </div>
+        <div class="bars" id="bars"></div>
+      </div>
+      <div class="banner" id="sampleBanner" hidden>
+        The reviews marked “Sample” are examples for the page design only. Delete them before launching so only real customer reviews appear.
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="toolbar">
+        <h2>What Buyers Say</h2>
+        <select id="sort" aria-label="Sort reviews">
+          <option value="new">Newest first</option>
+          <option value="high">Highest rated</option>
+          <option value="low">Lowest rated</option>
+        </select>
+      </div>
+      <div id="list"></div>
+    </section>
+
+    <section class="card">
+      <h2>Write a Review</h2>
+      <p>Bought a book from Learniverse? Tell other families about your experience. We publish honest reviews, good or bad.</p>
+      <form id="form" novalidate>
+        <div class="form-grid">
+          <div class="field"><label class="t" for="name">Your name</label>
+            <input type="text" id="name" maxlength="40" placeholder="e.g. Maria S. (first name and initial is fine)"></div>
+          <div class="field"><label class="t" for="order">Order number</label>
+            <input type="text" id="order" maxlength="30" placeholder="From your confirmation email"></div>
+        </div>
+        <div class="field"><label class="t" for="product">Which learning area?</label>
+          <select id="product">
+            <option>Language &amp; Reading</option><option>Mathematics &amp; Logic</option><option>Science &amp; Discovery</option>
+            <option>Arts &amp; Creativity</option><option>Life Skills &amp; Values</option><option>Other</option>
+          </select></div>
+        <div class="field"><span class="t" style="display:block;font-weight:800;margin-bottom:4px;color:#0b3a42">Your rating</span>
+          <div class="starpick" id="starpick">
+            <input type="radio" name="rating" id="s5" value="5"><label for="s5" title="5 stars">★</label>
+            <input type="radio" name="rating" id="s4" value="4"><label for="s4" title="4 stars">★</label>
+            <input type="radio" name="rating" id="s3" value="3"><label for="s3" title="3 stars">★</label>
+            <input type="radio" name="rating" id="s2" value="2"><label for="s2" title="2 stars">★</label>
+            <input type="radio" name="rating" id="s1" value="1"><label for="s1" title="1 star">★</label>
+          </div></div>
+        <div class="field"><label class="t" for="text">Your review</label>
+          <textarea id="text" rows="4" maxlength="600" placeholder="What did you and your child like or dislike? (at least 20 characters)"></textarea></div>
+        <label class="check"><input type="checkbox" id="agree">
+          <span>I confirm this review is based on my own purchase and experience, and I was not paid or given a free product for it. I have read the <a href="terms.html#t7" target="_blank">review rules</a>.</span></label>
+        <p class="msg" id="msg" role="status"></p>
+        <button type="submit" class="btn primary">Submit Review</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="foot-links">
+      <a href="about-learniverse.html">About Learniverse</a>
+      <a href="reviews.html">Customer Reviews</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="refund.html">Refund Policy</a>
+    </div>
+    <p>© 2026 Learniverse. Inspiring Curiosity, Creativity, and Lifelong Learning. ♥</p>
+  </footer>
+  <script src="../JS/auth.js"></script>
+</body>
+</html>
